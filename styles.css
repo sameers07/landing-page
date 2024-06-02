@@ -4,6 +4,192 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f0f0f0;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.hero .cta-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.hero .cta-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-buttons a:hover {
+    background-color: #555;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 0;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.features .feature img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.features .feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.features .feature p {
+    color: #666;
+    text-align: center;
+}
+
+/* Screenshots Section */
+.screenshots {
+    background-color: #f0f0f0;
+    padding: 80px 0;
+}
+
+.screenshots h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.screenshots .screenshot {
+    display: flex;
+    justify-content: center;
+}
+
+.screenshots .screenshot img {
+    margin: 0 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials .testimonial {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials .testimonial img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonials .testimonial .feedback {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.testimonials .testimonial .name {
+    font-weight: bold;
+}
+
+/* Pricing Plans Section */
+.pricing-plans {
+    background-color: #f0f0f0;
+    padding: 80px 0;
+}
+
+.pricing-plans h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing-plans .plan {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing-plans .plan h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.pricing-plans .plan .price {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.pricing-plans .plan ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-plans .plan ul li {
+    margin-bottom: 10px;
+}
+
+/* Add more styles as needed */
+
+
+/* Colors */
+:root {
+    --primary-color: #0070f3;
+    --secondary-color: #ff5722;
+    --background-color: #f7f7f7;
+    --text-color: #333;
+    --highlight-color: #ffd166;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
 header, section {
     padding: 20px;
@@ -11,32 +197,40 @@ header, section {
 }
 
 header.hero {
-    background: #f7f7f7;
+    background: var(--background-color);
     padding: 50px 20px;
+    box-shadow: 0 0 20px var(--shadow-color);
 }
 
 header.hero h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
 header.hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: var(--text-color);
 }
 
 .cta-buttons .cta-button {
     display: inline-block;
     margin: 0 10px;
     padding: 10px 20px;
-    background: #0070f3;
+    background: var(--primary-color);
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
 }
 
+.cta-buttons .cta-button:hover {
+    background: var(--highlight-color);
+}
+
 .features, .screenshots, .testimonials, .pricing, .contact {
     background: #fff;
+    box-shadow: 0 0 20px var(--shadow-color);
 }
 
 .features-list, .screenshots-gallery, .testimonials-list, .pricing-plans {
@@ -48,6 +242,14 @@ header.hero p {
 .feature, .testimonial, .pricing-plan {
     margin: 20px;
     flex: 1 1 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover, .testimonial:hover, .pricing-plan:hover {
+    transform: translateY(-5px);
 }
 
 .feature img, .testimonial img {
@@ -75,10 +277,15 @@ header.hero p {
 
 .contact button {
     padding: 10px 20px;
-    background: #0070f3;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: var(--highlight-color);
 }
 
 /* Responsive Design */
