@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #0070f3;
+    --secondary-color: #ff5722;
+    --background-color: #f7f7f7;
+    --text-color: #333;
+    --highlight-color: #ffd166;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --features-bg-color: #e3f2fd;
+    --screenshots-bg-color: #fff8e1;
+    --testimonials-bg-color: #f3e5f5;
+    --pricing-bg-color: #e8f5e9;
+    --contact-bg-color: #fce4ec;
+}
+

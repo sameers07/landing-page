@@ -1,40 +1,5 @@
-/* Global Styles */
-body {
-    font-family: 'Arial, sans-serif';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-/* Colors */
-:root {
-    --primary-color: #0070f3;
-    --secondary-color: #ff5722;
-    --background-color: #f7f7f7;
-    --text-color: #333;
-    --highlight-color: #ffd166;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --features-bg-color: #e3f2fd;
-    --screenshots-bg-color: #fff8e1;
-    --testimonials-bg-color: #f3e5f5;
-    --pricing-bg-color: #e8f5e9;
-    --contact-bg-color: #fce4ec;
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
+@import url('variables.css');
+@import url('animations.css');
 
 /* Common Styles */
 header, section {
@@ -106,57 +71,13 @@ header.hero .subheadline {
     transform: translateY(-5px);
 }
 
-/* Keyframes for Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounceIn {
-    from, 20%, 40%, 60%, 80%, to {
-        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 3000px, 0);
-    }
-    60% {
-        opacity: 1;
-        transform: translate3d(0, -20px, 0);
-    }
-    80% {
-        transform: translate3d(0, 10px, 0);
-    }
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
 /* Features Section */
 .features {
     padding: 80px 20px;
     background-color: var(--features-bg-color);
-    perspective: 1500px;
+    perspective: 1000px;
     position: relative;
     z-index: 1;
-    overflow: hidden;
 }
 
 .features::before {
@@ -171,58 +92,44 @@ header.hero .subheadline {
     z-index: -1;
 }
 
-@keyframes moveBg {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-
 .features h2 {
-    font-size: 3rem;
-    margin-bottom: 50px;
-    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
     animation: fadeInDown 1s ease-out;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .features-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    perspective: inherit;
 }
 
 .feature {
     margin: 20px;
     flex: 1 1 300px;
     background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    transform: rotateY(0deg) rotateX(0deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotateY(0deg);
     animation: fadeInUp 1s ease;
-    transform-style: preserve-3d;
 }
 
 .feature:hover {
-    transform: rotateY(15deg) rotateX(10deg) translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-5px) rotateY(15deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .feature img {
     max-width: 100px;
-    margin-bottom: 20px;
-    transition: transform 0.5s ease;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
 .feature:hover img {
-    transform: scale(1.2) rotate(10deg);
+    transform: scale(1.1);
 }
 
 /* Screenshots Section */
@@ -249,8 +156,8 @@ header.hero .subheadline {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     animation: fadeInUp 1s ease;
     width: 300px;
-    height: 400px;
-    object-fit: cover; /* Preserve the aspect ratio of the images */
+    height: 300px;
+    object-fit: cover;
 }
 
 .screenshots-gallery img:hover {
@@ -396,3 +303,4 @@ header.hero .subheadline {
     background: var(--highlight-color);
     transform: translateY(-5px);
 }
+
