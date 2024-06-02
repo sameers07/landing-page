@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, section {
+    padding: 20px;
+    text-align: center;
+}
+
+header.hero {
+    background: #f7f7f7;
+    padding: 50px 20px;
+}
+
+header.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+header.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-buttons .cta-button {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: #0070f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.features, .screenshots, .testimonials, .pricing, .contact {
+    background: #fff;
+}
+
+.features-list, .screenshots-gallery, .testimonials-list, .pricing-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature, .testimonial, .pricing-plan {
+    margin: 20px;
+    flex: 1 1 300px;
+}
+
+.feature img, .testimonial img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.pricing-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header.hero h1 {
+        font-size: 2rem;
+    }
+
+    .features-list, .screenshots-gallery, .testimonials-list, .pricing-plans {
+        flex-direction: column;
+    }
+
+    .feature, .testimonial, .pricing-plan {
+        margin: 10px;
+        flex: 1 1 100%;
+    }
+
+    .contact input, .contact textarea {
+        width: 90%;
+    }
+}
